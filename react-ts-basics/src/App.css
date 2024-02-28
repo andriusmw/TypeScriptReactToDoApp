@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+
+
+/*-------------------------------------------*/
+
+/* Goals Cards */
+.article {
+  background-color: gray;
+  color: white;
+  max-width: 70vw;
+  min-width: 40vw;
+  float: left;
+}
