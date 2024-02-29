@@ -54,3 +54,14 @@
   min-width: 40vw;
   float: left;
 }
+
+/*header*/
+
+Header img {
+  max-width: 20vw;
+  margin-left: 10vw;
+}
+
+Header h1 {
+  margin-left: 10vw;
+}

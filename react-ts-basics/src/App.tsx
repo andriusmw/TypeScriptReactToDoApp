@@ -1,6 +1,7 @@
 import CourseGoal from "./components/CourseGoal.tsx";
 import goalsImg from "./assets/images/goalsImg.jpg"
 import Header from "./components/Header.tsx";
+import './App.css'
 
 export default function App(){
   return <main>
