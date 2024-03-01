@@ -18,6 +18,8 @@ export type CourseGoal = {
 export default function App(){
 const [goals,setGoals] = useState<CourseGoal[]>([]);
 
+//-----------------------------FUNCTIONS-----------------------------------
+//-------------------------------------------------------------------------
 
 function handleAddGoal() {
   // ...
@@ -31,12 +33,26 @@ function handleAddGoal() {
   });
 }
 
+//-----------------------------------
+
+function handleDeleteGoal(id: number) {
+  setGoals(prevGoals => prevGoals.filter((goal) => goal.id !== id ))
+  // filter checks the array items searching for the id and compares to the condition, which is if goal.id
+  // is NOT the same as the parameter then we keep it (cause it checks the condition and its true) if the id is the same
+  // then the condition is false and we do not save it
+}
+
+
+
+
+//---------------RETURN & COMPONENTS & HTML------------------
+
   return <main>
     <Header image={{src: goalsImg, alt:"a list of goals"}}>
       <h1>Your course Goals</h1>
     </Header>
     <button onClick={handleAddGoal} >Add Goal</button>
-<CourseGoalList goals={goals} />
+    <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
    
   </main>
 }
