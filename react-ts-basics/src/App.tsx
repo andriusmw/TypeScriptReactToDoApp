@@ -3,6 +3,7 @@ import goalsImg from "./assets/images/goalsImg.jpg"
 import Header from "./components/Header.tsx";
 import './App.css'
 import { useState } from "react";
+import NewGoal from "./components/NewGoal.tsx";
 
 
 //Creating an interface for the type of array that is
@@ -51,7 +52,7 @@ function handleDeleteGoal(id: number) {
     <Header image={{src: goalsImg, alt:"a list of goals"}}>
       <h1>Your course Goals</h1>
     </Header>
-    <button onClick={handleAddGoal} >Add Goal</button>
+    <NewGoal />
     <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
    
   </main>
